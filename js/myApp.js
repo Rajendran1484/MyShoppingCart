@@ -114,7 +114,7 @@ function displayItems(filter_id)
 						
 							if(x.matches)
 							{
-								alert("Inside 940")
+								
 								document.querySelectorAll(".myRow")[0].style.height="630px"		
 							}
 							
