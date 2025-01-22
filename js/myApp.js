@@ -258,7 +258,7 @@ function addToCart(product_id,product_name,imgSrc,price)
 	
 	let myContainer=document.getElementById("flexContainer")
 	/*let newDiv=`<div id="${product_id}">
-				   <label>Product_name:</label><span style="margin-left:20px;">${product_name}</span><br>
+				   <label>Product Name:</label><span style="margin-left:20px;">${product_name}</span><br>
 				   <label>Quantity:</label><input style="margin-left:10px;" type="number" id="i${product_id}"><br>
 				   <label>Price:</label><span style="margin-left:90px;">₹${price}</span><br>
 				   <hr><button onclick="removeItem(${product_id})">DEL</button></div>`*/
@@ -388,7 +388,7 @@ function addToCart(product_id,product_name,imgSrc,price)
 	returnDiv=`<div id="flexContainer">
 	           <H2>Welcome,${cookieValue}</H2>
 			   <div id="${product_id}">
-			   <label>Product_name:</label><span style="margin-left:20px;">${product_name}</span><br>
+			   <label>Product Name:</label><span style="margin-left:20px;">${product_name}</span><br>
 			   <label>Quantity:</label><input style="margin-left:10px;text-align:center;" type="number"  id="i${product_id}" value="1" onchange="populateQuantity()"><br>
 			   <label>Price:</label><span style="margin-left:90px;">₹${price}</span><br>
 			   <hr><button class="badge badge-pill badge-danger" style="padding:10px;" onclick="removeItem(${product_id})"><i class="bi bi-trash3-fill"></i></button></div><div id="buttons" style="background-color:none;background-image:none;border:none;"><button class="btn btn-danger" onclick="clearCart()" style="float:left;margin:auto auto auto 10px;">Clear Cart</button>
