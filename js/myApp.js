@@ -192,7 +192,7 @@ function displayItems(filter_id)
 					
 					mySpan[n].style.float="left"
 					mySpan[n].style.color="red"
-					mySpan[n].style.margin="auto auto auto 10px"
+					mySpan[n].style.margin="6px auto auto 10px"
 					}
 					}
 					
@@ -203,7 +203,7 @@ function displayItems(filter_id)
 					{
 					if(!(String(myCartButton[j].innerHTML)==="undefined")&&(typeof(myCartButton[j])==="object"))
 						{
-						myCartButton[j].style.float="right"	
+						myCartButton[j].style.borderRadius="20px"	
 						myCartButton[j].style.margin="auto 10px auto auto"
 						
 						}
@@ -225,8 +225,8 @@ function displayProduct(product)
 	<H2>${product.product_name}</H2>
 	<img src="${product.imgSrc}">
 	<br>
-	<HR>
-	<span>₹${product.price}</span><button onclick="addToCart(${product.product_id},'${product.product_name}','${product.imgSrc}',${product.price})">Add-to-cart</button></div>`
+	<HR style="margin-bottom:10px;">
+	<span>₹${product.price}</span><button class="float-right btn btn-info" onclick="addToCart(${product.product_id},'${product.product_name}','${product.imgSrc}',${product.price})">Add-to-cart</button></div>`
 	
 }
 
@@ -465,7 +465,7 @@ function proceedPayment(total)
 	
 	cardDiv+=`<div style="width:510px;margin:auto;"><div style="float:left;margin:10px auto auto auto;"><label>Card Number:</label><input type="text" style="width:50px;text-align:center;" maxlength="4">-<input type="text" style="width:50px;text-align:center;" maxlength="4">-<input type="text" style="width:50px;text-align:center;" maxlength="4">-<input type="text" style="width:50px;text-align:center;" maxlength="4"></div>`
 	cardDiv+=`<div style="margin:10px 10px auto auto;float:right;">CVV/CVV2:<input type="password" style="appearance:none;padding-left:15px;width:70px;background-image:url('images/lock-fill.svg');background-size:15px auto;background-position:1px 5px;background-repeat:no-repeat;" maxlength="3"></div></div>`
-	cardDiv+=`<div style="margin:10px auto auto auto;clear:left;"><label>Valid thru:</label><input type="text" style="width:40px;text-align:center;margin-top:10px;" maxlength="2">/<input type="text" style="width:40px;text-align:center;margin-top:10px;" maxlength="2"></div><hr style="margin:0px;padding:0px;">`
+	cardDiv+=`<div style="margin:10px auto auto 27px;clear:left;"><label>Valid thru:</label><input type="text" style="width:40px;text-align:center;margin-top:10px;" maxlength="2">/<input type="text" style="width:40px;text-align:center;margin-top:10px;" maxlength="2"></div><hr style="margin:0px;padding:0px;">`
 	cardDiv+=`<button class="btn btn-success" onclick="paymentSuccessfull()" style="float:right;margin-right:15px;">Confirm payment</button>`
 	document.getElementById("bankInfo").innerHTML=cardDiv
 	
