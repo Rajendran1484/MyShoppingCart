@@ -83,59 +83,6 @@ function displayItems(filter_id)
 					
 					document.querySelectorAll(".myRow")[0].innerHTML=productHTML
 					
-					var x=window.matchMedia("(max-width:400px)")
-					
-					
-					myMediaOutput(x)
-					
-					function myMediaOutput(x)
-					{
-					
-					if(x.matches)
-					{
-						
-						document.querySelectorAll(".myRow")[0].style.height="1880px"	
-					}
-					else
-					{
-						
-						x=window.matchMedia("(max-width:700px)")
-						
-						if(x.matches)
-						{
-						
-						document.querySelectorAll(".myRow")[0].style.height="960px"
-							
-						}
-						else
-						{					
-						
-						x=window.matchMedia("(max-width:940px)")
-						
-							if(x.matches)
-							{
-								
-								document.querySelectorAll(".myRow")[0].style.height="630px"		
-							}
-							
-						}
-						
-					}
-					
-					
-					
-					}
-					
-					
-					
-					x.addEventListener("change",function(){
-						                        
-												myMediaOutput(x)
-									})
-										
-											
-					
-					
 					
 					document.querySelectorAll(".myRow")[0].style.display="flex"
 					document.querySelectorAll(".myRow")[0].style.flexDirection="row"
@@ -144,6 +91,8 @@ function displayItems(filter_id)
 					document.querySelectorAll(".myRow")[0].style.flexWrap="wrap"
 					document.querySelectorAll(".myRow")[0].style.padding="10px"
 					document.querySelectorAll(".myRow")[0].style.paddingTop="0px"
+					document.querySelectorAll(".myRow")[0].style.height="auto"
+					
 					
 					
 					
@@ -203,7 +152,8 @@ function displayItems(filter_id)
 					{
 					if(!(String(myCartButton[j].innerHTML)==="undefined")&&(typeof(myCartButton[j])==="object"))
 						{
-						myCartButton[j].style.borderRadius="20px"	
+						
+						myCartButton[j].style.borderRadius="20px"
 						myCartButton[j].style.margin="auto 10px auto auto"
 						
 						}
@@ -258,7 +208,7 @@ function addToCart(product_id,product_name,imgSrc,price)
 	
 	let myContainer=document.getElementById("flexContainer")
 	/*let newDiv=`<div id="${product_id}">
-				   <label>Product Name:</label><span style="margin-left:20px;">${product_name}</span><br>
+				   <label>Product_name:</label><span style="margin-left:20px;">${product_name}</span><br>
 				   <label>Quantity:</label><input style="margin-left:10px;" type="number" id="i${product_id}"><br>
 				   <label>Price:</label><span style="margin-left:90px;">₹${price}</span><br>
 				   <hr><button onclick="removeItem(${product_id})">DEL</button></div>`*/
@@ -388,7 +338,7 @@ function addToCart(product_id,product_name,imgSrc,price)
 	returnDiv=`<div id="flexContainer">
 	           <H2>Welcome,${cookieValue}</H2>
 			   <div id="${product_id}">
-			   <label>Product Name:</label><span style="margin-left:20px;">${product_name}</span><br>
+			   <label>Product_name:</label><span style="margin-left:20px;">${product_name}</span><br>
 			   <label>Quantity:</label><input style="margin-left:10px;text-align:center;" type="number"  id="i${product_id}" value="1" onchange="populateQuantity()"><br>
 			   <label>Price:</label><span style="margin-left:90px;">₹${price}</span><br>
 			   <hr><button class="badge badge-pill badge-danger" style="padding:10px;" onclick="removeItem(${product_id})"><i class="bi bi-trash3-fill"></i></button></div><div id="buttons" style="background-color:none;background-image:none;border:none;"><button class="btn btn-danger" onclick="clearCart()" style="float:left;margin:auto auto auto 10px;">Clear Cart</button>
@@ -463,7 +413,7 @@ function proceedPayment(total)
 	let cardDiv=`<img src="images/visa.svg"><img src="images/mastercard.svg"><img src="images/amex.svg"><img src="images/discover.svg">`
 	cardDiv+=`<H4 style="margin:10px auto auto auto">Amount Payable:₹${total}</H4>`
 	
-	cardDiv+=`<div style="width:510px;margin:auto;"><div style="float:left;margin:10px auto auto auto;"><label>Card Number:</label><input type="text" style="width:50px;text-align:center;" maxlength="4">-<input type="text" style="width:50px;text-align:center;" maxlength="4">-<input type="text" style="width:50px;text-align:center;" maxlength="4">-<input type="text" style="width:50px;text-align:center;" maxlength="4"></div>`
+	cardDiv+=`<div style="width:auto;margin:auto;"><div style="float:left;margin:10px auto auto auto;"><label>Card Number:</label><input type="text" style="width:50px;text-align:center;" maxlength="4">-<input type="text" style="width:50px;text-align:center;" maxlength="4">-<input type="text" style="width:50px;text-align:center;" maxlength="4">-<input type="text" style="width:50px;text-align:center;" maxlength="4"></div>`
 	cardDiv+=`<div style="margin:10px 10px auto auto;float:right;">CVV/CVV2:<input type="password" style="appearance:none;padding-left:15px;width:70px;background-image:url('images/lock-fill.svg');background-size:15px auto;background-position:1px 5px;background-repeat:no-repeat;" maxlength="3"></div></div>`
 	cardDiv+=`<div style="margin:10px auto auto 27px;clear:left;"><label>Valid thru:</label><input type="text" style="width:40px;text-align:center;margin-top:10px;" maxlength="2">/<input type="text" style="width:40px;text-align:center;margin-top:10px;" maxlength="2"></div><hr style="margin:0px;padding:0px;">`
 	cardDiv+=`<button class="btn btn-success" onclick="paymentSuccessfull()" style="float:right;margin-right:15px;">Confirm payment</button>`

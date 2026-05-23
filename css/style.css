@@ -70,6 +70,7 @@ body
 	width:400px;
 	
 	height:auto;
+	
    
 	background-color:skyblue;
 	border-width:0px 2px 2px 2px;
@@ -78,6 +79,13 @@ body
 	box-sizing:border-box;
 	
 	margin:auto;
+	
+}
+
+
+.carousel-item 
+{
+	padding:10px;
 	
 }
 
@@ -147,6 +155,7 @@ body
 {
 	padding:0px;
 	width:400px;
+	overflow-x:auto;
 	border-radius:3%;
 	box-sizing:border-box;
 	height:450px;
@@ -163,6 +172,7 @@ body
 {
 	width:400px;
 	height:215px;
+	overflow-x:auto;
 	display:none;
 	padding:0px;
 	box-sizing:border-box;
@@ -182,6 +192,7 @@ body
 {
 	width:400px;
 	height:200px;
+	overflow-x:auto;
 	background-color:#870707;
 	border-radius:3%;
     padding:0px;
@@ -288,6 +299,7 @@ body
 #finalBill #buttons2
 {
 	width:400px;
+	overflow-x:auto;
 	height:50px;
 	padding:0px;
 	box-sizing:border-box;
@@ -314,6 +326,9 @@ body
 	height:180px;
 	object-fit:cover;
 	border:1px solid red;
+	margin-left:10px;
+	margin-bottom:10px;
+	
 }
 
 .carousel-item .img2
@@ -323,6 +338,8 @@ body
 	height:180px;
 	object-fit:cover;
 	border:1px solid red;
+	margin-bottom:10px;
+	margin-left:10px;
 }
 
 #footer
@@ -360,14 +377,15 @@ body
 	font-family:myFont;
 }
 
-@media screen and (min-width:940px)
+@media screen and (min-width:960px)
 {
-	.wrapper{width:940px;}
+	.wrapper{width:960px;}
 	body{height:1000px;overflow-y:auto;background-repeat:repeat;width:100%;}
-	.myBanner{width:940px;}
-	.myRow{width:940px;}
-	nav{width:940px;}
+	.myBanner{width:960px;}
+	.myRow{width:960px;}
+	nav{width:960px;}
 	#demo{width:960px;}
+	.carousel-item{padding:20px;}
 	#finalBill{width:550px;top:10px;left:350px;position:fixed;height:560px;}
 	#finalBill #bankInfo{width:530px;padding:10px;box-sizing:border-box;}
 	#finalBill #billTable{width:530px;padding:30px;box-sizing:border-box;height:310px;overflow-y:auto;}
@@ -375,22 +393,24 @@ body
 	#flexContainer{height:430px;overflow-y:auto;}
 	.carousel-item .img1{width:450px;height:200px;object-fit:cover;border:1px solid red;}
 	.carousel-item .img2{width:450px;margin-top:3px;height:200px;object-fit:cover;border:1px solid red;}
-	#footer{width:940px;}
+	#footer{width:960px;}
 	#footer #myMail{width:400px;float:right;}
 	
 }
 
 
-@media screen and (min-width:400px) and (max-width:700px)
+@media screen and (min-width:700px) and (max-width:960px)
 {
 	.wrapper{width:630px;margin:auto}
 	body{height:800px;overflow-y:auto;background-repeat:repeat;width:100%;}
+	.carousel-item{padding:20px;}
 	.myBanner{width:630px;}
 	.myRow{width:630px;}
 	nav{width:630px;}
 	#demo{width:630px;}
-	.carousel-item .img1{width:290px;height:200px;object-fit:cover;border:1px solid red;}
-	.carousel-item .img2{width:290px;margin-top:3px;height:200px;object-fit:cover;border:1px solid red;}
+	.carousel-item{padding:15px;}
+	.carousel-item .img1{width:290px;height:200px;object-fit:cover;border:1px solid red;margin-left:15px;margin-bottom:10px;}
+	.carousel-item .img2{width:290px;height:200px;object-fit:cover;border:1px solid red;margin-left:15px;margin-bottom:10px;}
 	#finalBill{width:550px;top:10px;left:50px;position:fixed;height:450px;overflow-y:auto;}
 	#finalBill #bankInfo{width:530px;padding:10px;box-sizing:border-box;}
 	#finalBill #billTable{width:530px;padding:30px;box-sizing:border-box;height:200px;overflow-y:auto;}
